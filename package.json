@@ -4,7 +4,7 @@
   "description": "Getting familiar with JS testing suites",
   "main": "test.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/philraj/trying-out-mocha#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "request": "^2.69.0"
   }
 }
