@@ -35,7 +35,7 @@ describe("Color Code Converter API", () => {
 
     it("returns the color in RGB", () => {
       request(url, (err, response, body) => {
-        expect(body).to.equal('[0, 255, 0]');
+        expect(body).to.equal('[0,255,0]');
         done();
       })
     });
