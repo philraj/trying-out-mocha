@@ -1,10 +1,12 @@
 var expect = require('chai').expect;
 var request = require('request');
+var converter = require('../app/converter');
 
 describe("Color Code Converter API", () => {
 
   describe("RGB to Hex conversion", () => {
-    var url = "http://localhost:3000/rgbToHex?red=255&green=255&blue=255";
+
+    var url = `http://localhost:3000/rgbToHex?red=255&green=255&blue=255`;
 
     it("returns status 200", (done) => {
       request(url, (err, response, body) => {
@@ -15,7 +17,8 @@ describe("Color Code Converter API", () => {
 
     it("returns the color in hex", (done) => {
       request(url, (err, response, body) => {
-        expect(body).to.equal('ffffff');
+
+        expect(body).to.equal(converter.rgbToHex(255,255,255));
         done();
       })
     });
